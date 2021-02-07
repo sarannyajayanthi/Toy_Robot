@@ -110,7 +110,6 @@ void ToyRobot::report()
 
 int main(int argc, char *argv[])
 {
-    //cout<<argc<<"\n";
     if (argc != 2)
     {
         cout << "No input file to process";
@@ -124,10 +123,8 @@ int main(int argc, char *argv[])
     myfile.open(input);
     if (myfile.is_open())
     {
-
         ToyRobot robot(5, 5);
-        //Parse the commands from standard input(one line at a time)
-    //    while (getline(std::cin, sLine))
+        //Parse the commands from file(one line at a time)
         while (std::getline(myfile, line))
         {
             //cout << line << endl;
@@ -178,7 +175,6 @@ int main(int argc, char *argv[])
                 }
             }
         }
-        return 0;
         myfile.close();
         return 0;
     }
@@ -186,20 +182,6 @@ int main(int argc, char *argv[])
     {
         cout << "Unable to open file";
         return 1;
-    }
-        
-        
-
+    }     
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
 
