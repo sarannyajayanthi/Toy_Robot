@@ -1,0 +1,1 @@
+Error Placing Toy Robot in position 5,0
